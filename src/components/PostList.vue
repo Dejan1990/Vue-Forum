@@ -35,7 +35,6 @@
 
 <script>
 import sourceData from '@/data.json'
-import AppDate from '@/components/AppDate'
 
 export default {
   props: {
@@ -48,9 +47,6 @@ export default {
     return {
       users: sourceData.users
     }
-  },
-  components: {
-    AppDate
   },
   methods: {
     userById (userId) {
