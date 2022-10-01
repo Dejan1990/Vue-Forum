@@ -54,7 +54,7 @@ export default {
     }
   },
   methods: {
-    async save () {
+    async save () { //async save() -> means we can await for createPost method in store/index.js actions to be done 
       const thread = await this.$store.dispatch('createThread', {
         forumId: this.forum.id,
         title: this.title,
