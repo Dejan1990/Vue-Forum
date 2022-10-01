@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from '@/router'
 import store from '@/store'
 
+import { initializeApp } from "firebase/app";
+import firebaseConfig from '@/config/firebase'
+initializeApp(firebaseConfig);
+
 //createApp(App).mount('#app')
 
 const forumApp = createApp(App)
