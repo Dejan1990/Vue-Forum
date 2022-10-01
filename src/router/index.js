@@ -1,5 +1,6 @@
 import HomePage from '@/pages/HomePage'
 import ThreadShow from '@/pages/ThreadShow'
+import ThreadCreate from '@/pages/ThreadCreate'
 import NotFound from '@/pages/NotFound'
 import ForumPage from '@/pages/ForumPage'
 import CategoryPage from '@/pages/CategoryPage'
@@ -59,6 +60,12 @@ const routes = [
       }
       // if doesnt exist redirect to not found
     }
+  },
+  {
+    path: '/form/:forumId/thread/create',
+    name: 'ThreadCreate',
+    component: ThreadCreate,
+    props: true
   },
   {
     path: '/:pathMatch(.*)*',
