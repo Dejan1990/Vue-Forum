@@ -6,7 +6,7 @@
         <p class="text-lead">{{ forum.description }}</p>
       </div>
       <router-link
-        :to="{name:'ThreadCreate', params: {forumId: forum.id}}"
+        :to="{name:'ThreadCreate', params: {forumId: forum.id} }"
         class="btn-green btn-small"
       >
         Start a thread
@@ -36,7 +36,9 @@ export default {
     },
     threads () {
       if (!this.forum) return []
-      return this.forum.threads.map(threadId => this.$store.getters.thread(threadId))
+      //return this.forum.threads.map(threadId => this.$store.getters.thread(threadId))
+
+      return this.forum.threads.map(threadId => this.$store.getters.thread(threadId)).filter(thread => thread.id)
     }
   },
   methods: {
