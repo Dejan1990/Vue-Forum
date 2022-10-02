@@ -1,8 +1,8 @@
 module.exports = {
-    apiKey: "AIzaSyDAch8DZsPWSeAGagexAccFe6dYHLmKcyU",
-    authDomain: "vue-forum-dc53b.firebaseapp.com",
-    projectId: "vue-forum-dc53b",
-    storageBucket: "vue-forum-dc53b.appspot.com",
-    messagingSenderId: "924072974136",
-    appId: "1:924072974136:web:15732ae2f16aa2ac86d3cd"
-  };
+    apiKey: "AIzaSyAHSXMmb3WWi7jXR4tPt9eVST9QvBF0wxA",
+    authDomain: "vue-forum-e5c4e.firebaseapp.com",
+    projectId: "vue-forum-e5c4e",
+    storageBucket: "vue-forum-e5c4e.appspot.com",
+    messagingSenderId: "803704088805",
+    appId: "1:803704088805:web:44ca4d9f6b6ebc29060c0c"
+  }
