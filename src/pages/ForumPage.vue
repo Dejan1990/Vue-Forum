@@ -17,6 +17,7 @@
     <ThreadList :threads="threads"/>
   </div>
 </template>
+
 <script>
 import ThreadList from '@/components/ThreadList'
 import { findById } from '@/helpers'
