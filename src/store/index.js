@@ -1,7 +1,6 @@
 import { createStore } from 'vuex'
 import { findById, upsert } from '@/helpers'
 import firebase from 'firebase'
-
 export default createStore({
   state: {
     categories: [],
@@ -9,7 +8,7 @@ export default createStore({
     threads: [],
     posts: [],
     users: [],
-    authId: 'f5xvKdIPQdSrUtT6i3UiHYttRXO2'
+    authId: 'VXjpr2WHa8Ux4Bnggym8QFLdv5C3'
   },
   getters: {
     authUser: (state, getters) => {
@@ -163,12 +162,14 @@ export default createStore({
     appendContributorToThread: makeAppendChildToParentMutation({ parent: 'threads', child: 'contributors' })
   }
 })
-
 function makeAppendChildToParentMutation ({ parent, child }) {
   return (state, { childId, parentId }) => {
     const resource = findById(state[parent], parentId)
+    if (!resource) {
+      console.warn(`Appending ${child} ${childId} to ${parent} ${parentId} failed because the parent didn't exist`)
+      return
+    }
     resource[child] = resource[child] || []
-    //const test = resource.posts || []
 
     if (!resource[child].includes(childId)) {
       resource[child].push(childId)
