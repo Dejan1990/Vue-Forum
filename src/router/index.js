@@ -7,6 +7,7 @@ import ForumPage from '@/pages/ForumPage'
 import CategoryPage from '@/pages/CategoryPage'
 import ProfilePage from '@/pages/ProfilePage'
 import RegisterPage from '@/pages/RegisterPage'
+import SignIn from '@/pages/SignIn'
 import { createRouter, createWebHistory } from 'vue-router'
 import store from '@/store'
 
@@ -82,6 +83,11 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterPage
+  },
+  {
+    path: '/signin',
+    name: 'SignIn',
+    component: SignIn
   },
   {
     path: '/:pathMatch(.*)*',
